@@ -5,8 +5,8 @@
 */
 #include <WiFi.h>
  
-const char* ssid     = "itdabos_wifi2.4G";
-const char* password = "0819110933";
+const char* ssid     = "WIFI";
+const char* password = "PASSWORD";
  
 WiFiServer server(80);
  

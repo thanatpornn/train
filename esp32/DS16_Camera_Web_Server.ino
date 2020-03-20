@@ -1,3 +1,9 @@
+/*
+   Camera Web Server
+   modified for esp32 on January 2020
+   modified by Digital Siam
+*/
+
 #include "esp_camera.h"
 #include <WiFi.h>
 
@@ -15,20 +21,19 @@
 
 #include "camera_pins.h"
 
-//const char* ssid = "*********";
-//const char* password = "*********";
-const char* ssid = "itdabos_wifi2.4G";
-const char* password = "0819110933";
+const char* ssid = "WIFI";
+const char* password = "PASSWORD";
 
 void startCameraServer();
 
 void setup() {
   Serial.begin(115200);
   Serial.setDebugOutput(true);
-  Serial.printf("test");
-  Serial.println("WiFi connected");
   Serial.println();
-
+ Serial.println("program DS15");
+ Serial.println("Camera Web Server");
+ Serial.println("modified for esp32"); 
+ Serial.println("modified by Digital Siam");
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
   config.ledc_timer = LEDC_TIMER_0;
@@ -106,6 +111,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.println(".....");
   delay(10000);
 }

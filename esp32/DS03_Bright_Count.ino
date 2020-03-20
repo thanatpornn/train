@@ -1,6 +1,6 @@
 /*
    Bright Count
-   modified for esp8266 on January 2020
+   modified for esp32 on January 2020
    modified by digitalsiam
 */
 int d1=0;
@@ -11,8 +11,8 @@ void setup(){
  delay(5000);
  Serial.println("program DS03");
  Serial.println("Bright Count");
- Serial.println("modified for esp8266"); 
- Serial.println("modified by digital siam");
+ Serial.println("modified for esp32"); 
+ Serial.println("modified by Digital Siam");
 
 }
 
@@ -20,10 +20,11 @@ void loop(){
  int d = digitalRead(2);
 if(d1>d){
   cnt++;
+   Serial.println("แสงสว่างครั้งที่ = "+(String)cnt);
  }  
  d1=d;
 
- Serial.println("แสงสว่างครั้งที่ = "+(String)cnt);
+
  delay(300);
 
   
